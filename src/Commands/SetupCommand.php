@@ -20,7 +20,7 @@ class SetupCommand extends Command
         ];
 
         try {
-            exec('composer require ' . implode(' ', $packages) . ' -W', $output, $returnCode);
+            exec('composer require '.implode(' ', $packages).' -W', $output, $returnCode);
         } catch (\Throwable $th) {
             report($th);
 

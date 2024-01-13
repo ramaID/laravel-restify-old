@@ -17,12 +17,12 @@ class GenerateDataCommand extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Data';
+        return $rootNamespace.'\Data';
     }
 
     protected function replaceClass($stub, $name)
     {
-        $class = str_replace($this->getNamespace($name) . '\\', '', $name);
+        $class = str_replace($this->getNamespace($name).'\\', '', $name);
 
         // Do string replacement
         return str_replace('{{ name }}', $class, $stub);

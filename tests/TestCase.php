@@ -2,9 +2,9 @@
 
 namespace CodeWeaver\LaravelRestify\Tests;
 
+use CodeWeaver\LaravelRestify\LaravelRestifyServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use CodeWeaver\LaravelRestify\LaravelRestifyServiceProvider;
 
 class TestCase extends Orchestra
 {
