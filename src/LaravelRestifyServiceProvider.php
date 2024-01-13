@@ -2,9 +2,12 @@
 
 namespace CodeWeaver\LaravelRestify;
 
+use CodeWeaver\LaravelRestify\Commands\GenerateCommand;
+use CodeWeaver\LaravelRestify\Commands\GenerateControllerCommand;
+use CodeWeaver\LaravelRestify\Commands\GenerateDataCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use CodeWeaver\LaravelRestify\Commands\LaravelRestifyCommand;
+use CodeWeaver\LaravelRestify\Commands\SetupCommand;
 
 class LaravelRestifyServiceProvider extends PackageServiceProvider
 {
@@ -17,9 +20,13 @@ class LaravelRestifyServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-restify')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-restify_table')
-            ->hasCommand(LaravelRestifyCommand::class);
+            // ->hasConfigFile()
+            // ->hasViews()
+            // ->hasMigration('create_laravel-restify_table')
+            ->hasCommand(SetupCommand::class)
+            ->hasCommand(GenerateDataCommand::class)
+            ->hasCommand(GenerateControllerCommand::class)
+            ->hasCommand(GenerateCommand::class)
+        ;
     }
 }
