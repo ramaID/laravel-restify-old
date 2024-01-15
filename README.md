@@ -35,6 +35,12 @@ php artisan restify:gen {name}
 composer test
 ```
 
+### Development
+
+```bash
+composer config repositories.laravel-restify '{"type": "path", "url": "/Users/rama/Personal/meta-forge-phpunit/laravel-restify", "options": {"symlink": true}}'
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
