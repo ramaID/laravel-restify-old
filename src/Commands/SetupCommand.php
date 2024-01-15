@@ -21,6 +21,8 @@ class SetupCommand extends Command
 
         try {
             exec('composer require '.implode(' ', $packages).' -W', $output, $returnCode);
+
+            copy(__DIR__.'/../../stubs/typescript-transformer.php', config_path('typescript-transformer.php'));
         } catch (\Throwable $th) {
             report($th);
 
