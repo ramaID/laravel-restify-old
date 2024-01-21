@@ -41,8 +41,9 @@ class {{ name }} extends Controller
     /**
     * Display the specified resource.
     */
-    public function show(Model $model): DataObject
-    {
+    public function show(
+        Model $model // TODO: adjust route param
+    ): DataObject {
         return DataObject::from($model);
     }
 
