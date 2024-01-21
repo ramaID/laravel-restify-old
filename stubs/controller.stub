@@ -33,27 +33,27 @@ class {{ name }} extends Controller
     public function store(DataObject $data): DataObject
     {
         $attributes = $data->toArray();
-        $category = $this->model->query()->create($attributes);
+        $model = $this->model->query()->create($attributes);
 
-        return DataObject::from($category);
+        return DataObject::from($model);
     }
 
     /**
     * Display the specified resource.
     */
-    public function show(Model $category): DataObject
+    public function show(Model $model): DataObject
     {
-        return DataObject::from($category);
+        return DataObject::from($model);
     }
 
     /**
     * Update the specified resource in storage.
     */
-    public function update(DataObject $data, Model $category): Response
+    public function update(DataObject $data, Model $model): Response
     {
         $attributes = $data->only('name')->toArray();
 
-        $category->update($attributes);
+        $model->update($attributes);
 
         return response()->noContent();
     }
@@ -61,9 +61,9 @@ class {{ name }} extends Controller
     /**
     * Remove the specified resource from storage.
     */
-    public function destroy(Model $category): Response
+    public function destroy(Model $model): Response
     {
-        $category->delete();
+        $model->delete();
 
         return response()->noContent();
     }
