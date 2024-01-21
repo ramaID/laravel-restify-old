@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-restify` will be documented in this file.
 
+## v1.0.5 - 2024-01-21
+
+### What's Changed
+
+* fix: adjust route param by @ramaID in https://github.com/ramaID/laravel-restify/pull/6
+
+**Full Changelog**: https://github.com/ramaID/laravel-restify/compare/v1.0.4...v1.0.5
+
 ## v1.0.4 - 2024-01-21
 
 ### What's Changed
