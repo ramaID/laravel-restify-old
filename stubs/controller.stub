@@ -51,9 +51,7 @@ class {{ name }} extends Controller
     */
     public function update(DataObject $data, Model $model): Response
     {
-        $attributes = $data->only('name')->toArray();
-
-        $model->update($attributes);
+        $model->update($data->toArray());
 
         return response()->noContent();
     }
