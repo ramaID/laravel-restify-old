@@ -12,7 +12,7 @@ Is a powerful and intuitive package designed to accelerate REST API development 
 You can install the package via composer:
 
 ```bash
-composer require codeweaver/laravel-restify
+composer require codeweaver/laravel-restify --dev
 ```
 
 ## Usage
@@ -27,6 +27,12 @@ php artisan restify:setup
 
 ```bash
 php artisan restify:gen {name}
+```
+
+### Generate typescript type
+
+```bash
+php artisan typescript:transform
 ```
 
 ## Testing
