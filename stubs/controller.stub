@@ -49,8 +49,10 @@ class {{ name }} extends Controller
     /**
     * Update the specified resource in storage.
     */
-    public function update(DataObject $data, Model $model): Response
-    {
+    public function update(
+        DataObject $data,
+        Model $model, // TODO: adjust route param
+    ): Response {
         $model->update($data->toArray());
 
         return response()->noContent();
@@ -59,8 +61,9 @@ class {{ name }} extends Controller
     /**
     * Remove the specified resource from storage.
     */
-    public function destroy(Model $model): Response
-    {
+    public function destroy(
+        Model $model // TODO: adjust route param
+    ): Response {
         $model->delete();
 
         return response()->noContent();
