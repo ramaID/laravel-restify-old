@@ -2,6 +2,15 @@
 
 All notable changes to `laravel-restify` will be documented in this file.
 
+## v1.0.3 - 2024-01-21
+
+### What's Changed
+
+* fix: patch attributes by @ramaID in https://github.com/ramaID/laravel-restify/pull/3
+* fix: generate variable name by @ramaID in https://github.com/ramaID/laravel-restify/pull/4
+
+**Full Changelog**: https://github.com/ramaID/laravel-restify/compare/v1.0.1...v1.0.3
+
 ## v1.0.1 - 2024-01-15
 
 ### What's Changed
